@@ -1,0 +1,48 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor del video con decoración */
+.video-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Título del video */
+.video-container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Marco del video */
+.video-frame {
+    border: 5px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+/* Estilos del video */
+.video-frame video {
+    width: 100%;
+    height: auto;
+}
+
+/* Descripción del video */
+.video-description {
+    font-size: 16px;
+    color: #555;
+}

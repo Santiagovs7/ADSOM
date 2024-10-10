@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADSOM - Inicio de Sesión</title>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@200;300;400;500;600;700&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            margin: 50px auto;
+        }
+        h2 {
+            text-align: center;
+            color: #006600;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #006600;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #004d00;
+        }
+        .toggle-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .toggle-link a {
+            color: #006600;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .toggle-link a:hover {
+            text-decoration: underline;
+        }
+        .fondo-registro {
+            background-image: url(./img/fondo-registro.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 950px;
+            position: relative;
+            padding-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fondo-registro">  
+        <div class="container">  
+            <!-- Inicio de Sesión -->
+            <div class="form-container" id="loginForm">
+                <h2>Inicio de Sesión</h2>
+                <form action="#" method="POST">
+                    <label for="emailLogin">Correo Electrónico:</label>
+                    <input type="email" id="emailLogin" name="emailLogin" required>
+
+                    <label for="passwordLogin">Contraseña:</label>
+                    <input type="password" id="passwordLogin" name="passwordLogin" required>
+
+                    <input type="submit" value="Iniciar Sesión">
+                </form>
+                <div class="toggle-link">
+                    <p>¿No tienes una cuenta? <a href="#" onclick="toggleForm()">Regístrate aquí</a></p>
+                </div>
+            </div>
+
+            <!-- Registro -->
+            <div class="form-container" id="registerForm" style="display:none;">
+                <h2>Registro de Usuario</h2>
+                <form action="#" method="POST">
+                    <label for="nameRegister">Nombre Completo:</label>
+                    <input type="text" id="nameRegister" name="nameRegister" required>
+
+                    <label for="emailRegister">Correo Electrónico:</label>
+                    <input type="email" id="emailRegister" name="emailRegister" required>
+
+                    <label for="passwordRegister">Contraseña:</label>
+                    <input type="password" id="passwordRegister" name="passwordRegister" required>
+
+                    <input type="submit" value="Registrarse">
+                </form>
+                <div class="toggle-link">
+                    <p>¿Ya tienes una cuenta? <a href="#" onclick="toggleForm()">Inicia sesión aquí</a></p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function toggleForm() {
+                var loginForm = document.getElementById("loginForm");
+                var registerForm = document.getElementById("registerForm");
+
+                if (loginForm.style.display === "none") {
+                    loginForm.style.display = "block";
+                    registerForm.style.display = "none";
+                } else {
+                    loginForm.style.display = "none";
+                    registerForm.style.display = "block";
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
